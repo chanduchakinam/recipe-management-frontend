@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "http://localhost:5000/api/recipes" // Change this if deployed
+const API_URL = "https://recipe-management-app-xdja.onrender.com/api/recipes" // Change this if deployed
 
 export const getRecipes = async () => {
   const response = await axios.get(API_URL);
@@ -27,4 +27,4 @@ export const updateRecipe = async (id, recipe) => {
 export const updateRecipeOrder = async (newOrder) => {
   const response = await axios.put(`${API_URL}/order`, newOrder);
   return response.data;
-}
+};
