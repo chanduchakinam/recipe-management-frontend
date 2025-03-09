@@ -10,12 +10,18 @@ function RecipeForm(props) {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    await createRecipe({ title, ingredients, instructions });
-    setTitle("");
-    setIngredients("");
-    setInstructions("");
-    alert("Recipe added successfully!");
-    setToggle(!toggle);
+    const newRecipe = { title, ingredients: ingredients.split("\n"), instructions, order: 0 };
+    console.log("📤 Sending POST request:", newRecipe); // ✅ Log recipe data
+    try {
+      const response = await createRecipe(newRecipe);
+      console.log("✅ Recipe Saved:", response); // ✅ Log saved recipe
+      setTitle("");
+      setIngredients("");
+      setInstructions("");
+      setToggle(!toggle);
+    } catch (error) {
+      console.error("❌ Error creating recipe:", error); // ✅ Log error details
+    }
   };
 
   return (
