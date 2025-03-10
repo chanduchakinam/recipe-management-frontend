@@ -1,63 +1,23 @@
-ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    width: 300px;
-    background: #f8f9fa;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-  
-li {
-    padding: 12px;
-    margin: 8px 0;
-    background: #ffffff;
-    border-radius: 6px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    cursor: grab;
-    font-size: 16px;
-    transition: background 0.2s ease-in-out;
-}
-  
-li:active {
-    cursor: grabbing;
-}
-  
-li:hover {
-    background: #e9ecef;
-}
-  
-li:focus {
-    outline: none;
-}
-  
-li:last-child {
-    margin-bottom: 0;
-}
-  
-.dragging {
-    background-color: #cce5ff;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+.drag-container {
+    max-width: 400px;
+    margin: auto;
 }
 
 .drag-list {
-    list-style-type: none;
+    list-style: none;
     padding: 0;
-    background: #f8f9fa;
-    border-radius: 5px;
-    min-height: 100px;
 }
   
 .drag-item {
+    background: white;
     padding: 10px;
-    margin: 5px;
-    background: #ffffff;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    margin-bottom: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
     cursor: grab;
+    transition: background 0.2s ease-in-out;
 }
   
 .dragging {
-    background-color: #ffeb3b;
-    transform: scale(1.05);
-}
+    background: #e0e0e0;
+}  
